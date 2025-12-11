@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Dani",
+    "impostor": true
+  },
+  {
+    "name": "Angel",
+    "impostor": false
+  },
+  {
+    "name": "Juan",
+    "impostor": false
+  }
+]

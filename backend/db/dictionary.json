@@ -1,0 +1,66 @@
+{
+  "animales": {
+    "activa": true,
+    "label": "Animales",
+    "words": [
+      {
+        "word": "gato",
+        "uses": 0
+      },
+      {
+        "word": "perro",
+        "uses": 0
+      }
+    ]
+  },
+  "lugares": {
+    "activa": true,
+    "label": "Lugares",
+    "words": [
+      {
+        "word": "playa",
+        "uses": 0
+      },
+      {
+        "word": "montaña",
+        "uses": 0
+      }
+    ]
+  },
+  "brawlstars": {
+    "activa": true,
+    "label": "Brawl Starts",
+    "words": [
+      {
+        "word": "Colt",
+        "uses": 0
+      },
+      {
+        "word": "Mandy",
+        "uses": 0
+      },
+      {
+        "word": "MZ",
+        "uses": 0
+      },
+      {
+        "word": "Leon",
+        "uses": 0
+      },
+      {
+        "word": "Señor P",
+        "uses": 0
+      }
+    ]
+  },
+  "pelis": {
+    "activa": true,
+    "label": "Pelis",
+    "words": []
+  },
+  "series": {
+    "activa": true,
+    "label": "Series",
+    "words": []
+  }
+}
