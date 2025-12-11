@@ -1,0 +1,10 @@
+<p>game works!</p>
+<button routerLink="/">Back</button>
+
+<ul>
+  <li *ngFor="let player of players">
+    {{ player.name }} - {{player.impostor ? 'Impostor' : 'No Impostor' }}
+  </li>
+</ul>
+
+<p>La palabra es: {{word}}</p>

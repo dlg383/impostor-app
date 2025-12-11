@@ -1,0 +1,35 @@
+<button routerLink="/">back</button>
+<h2>Jugadores</h2>
+
+<!-- Lista de jugadores -->
+<ul>
+  <li *ngFor="let player of players">
+    {{ player.name }}
+  </li>
+</ul>
+
+<!-- Botón que abre el modal -->
+<button (click)="openModal()">
+  Añadir jugador
+</button>
+
+<!-- MODAL -->
+<div *ngIf="showAddPlayerModal" class="modal-backdrop">
+  <div class="modal">
+    <h3>Añadir jugador</h3>
+
+    <label>
+      Nombre:
+      <input
+        type="text"
+        [(ngModel)]="newPlayer.name"
+        placeholder="Nombre del jugador"
+      />
+    </label>
+
+    <div class="modal-actions">
+      <button (click)="savePlayer()">Guardar</button>
+      <button (click)="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>

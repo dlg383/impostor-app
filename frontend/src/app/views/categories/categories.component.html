@@ -1,0 +1,35 @@
+<button routerLink="/">Back</button>
+
+<ul>
+  <li *ngFor="let tematic of tematics">
+    <button routerLink="/category">
+      {{ tematic.label }} - {{ tematic.activa ? 'activa' : 'no activa' }}
+    </button>
+  </li>
+</ul>
+
+<!-- Botón que abre el modal -->
+<button (click)="openModal()">
+  Añadir Tema
+</button>
+
+<!-- MODAL -->
+<div *ngIf="showAddCategoryModal" class="modal-backdrop">
+  <div class="modal">
+    <h3>Añadir jugador</h3>
+
+    <label>
+      Nombre:
+      <input
+        type="text"
+        [(ngModel)]="newTematic"
+        placeholder="Nombre del jugador"
+      />
+    </label>
+
+    <div class="modal-actions">
+      <button (click)="saveTematic()">Guardar</button>
+      <button (click)="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
