@@ -4,7 +4,6 @@ const path = require('path');
 const DATA_FILE = path.join(__dirname, '..', 'db', 'players.json');
 
 let players = [];
-let impostors = [];
 
 function load() {
   try {
@@ -35,12 +34,6 @@ function add(player) {
   return newPlayer;
 }
 
-function setImpostorTrue(index) {
-  if (!players[index]) return null;
-  players[index].impostor = true;
-  return players[index]; 
-}
-
 function selectImpostor(impostorCount) {
   if (!Array.isArray(players) || players.length === 0) {
     return [];
@@ -61,11 +54,19 @@ function selectImpostor(impostorCount) {
   }
 
   chosenIndices.forEach(idx => {
-    const updated = setImpostorTrue(idx);
-    if (updated) {
-      impostors.push(updated);
-    }
+    setImpostorTrue(idx);
   });
+  save();
+  return true;
+}
+
+function deletePlayer(name) {
+  if (!name) return null;
+
+  const before = players.length;
+  players = players.filter(p => p.name !== name);
+
+  if (players.length === before) return null; // no encontró nada
   save();
   return true;
 }
@@ -74,5 +75,6 @@ module.exports = {
   load,
   getAll,
   add,
-  selectImpostor
+  selectImpostor,
+  deletePlayer
 };

@@ -1,2 +1,37 @@
-<p>category works!</p>
 <button routerLink="/categories">Back</button>
+
+<h2>Palabras</h2>
+<p>Id de la temática: {{ tematiKey }}</p>
+
+<ul class="list">
+  <li *ngFor="let word of words" class="row">
+    <span class="text">{{ word.word }}</span>
+
+    <button class="danger" (click)="deleteWord(word)">Borrar</button>
+  </li>
+</ul>
+
+<button class="add" (click)="openModal()">
+  Añadir Palabra
+</button>
+
+<!-- MODAL -->
+<div *ngIf="showAddWordModal" class="modal-backdrop" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <h3>Añadir Palabra</h3>
+
+    <label>
+      Palabra:
+      <input
+        type="text"
+        [(ngModel)]="newWord"
+        placeholder="Palabra"
+      />
+    </label>
+
+    <div class="modal-actions">
+      <button (click)="saveWord()">Guardar</button>
+      <button (click)="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>

@@ -57,4 +57,18 @@ export class PlayersComponent implements OnInit{
       }
     });
   }
+
+  deletePlayer(player: String){
+    const name = player.toString();
+
+    this.playerService.deletePlayer(name).subscribe({
+      next: () => {
+        // si tienes el array players cargado, lo actualizas:
+        this.players = this.players.filter(p => p.name !== name);
+      },
+      error: (err) => {
+        console.error('Error borrando jugador', err);
+      }
+    });
+  }
 }

@@ -3,8 +3,11 @@
 
 <!-- Lista de jugadores -->
 <ul>
-  <li *ngFor="let player of players">
-    {{ player.name }}
+  <li *ngFor="let player of players" class="player-row">
+    <span>{{ player.name }}</span>
+
+    <!-- Botón borrar -->
+    <button class="danger" (click)="deletePlayer(player.name)">Borrar</button>
   </li>
 </ul>
 

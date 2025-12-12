@@ -1,10 +1,41 @@
-<p>game works!</p>
 <button routerLink="/">Back</button>
 
-<ul>
-  <li *ngFor="let player of players">
-    {{ player.name }} - {{player.impostor ? 'Impostor' : 'No Impostor' }}
-  </li>
-</ul>
+<section class="game" *ngIf="players?.length; else noPlayers">
+  <header class="top">
+    <h2>Turno</h2>
+    <span class="step">{{ currentIndex + 1 }} / {{ players.length }}</span>
+  </header>
 
-<p>La palabra es: {{word}}</p>
+  <div class="card">
+    <div class="label">Jugador</div>
+    <div class="player-name">{{ currentPlayer.name }}</div>
+
+    <div
+      #secretBox
+      class="secret-box"
+      [class.dragging]="dragging"
+      (pointerdown)="onSecretDown($event, secretBox)"
+      (pointermove)="onSecretMove($event, secretBox)"
+      (pointerup)="onSecretUp($event, secretBox)"
+      (pointercancel)="onSecretUp($event, secretBox)"
+      (pointerleave)="onSecretUp($event, secretBox)"
+    >
+      <div class="secret-text">{{ secretText }}</div>
+      <div class="secret-cover" [ngStyle]="coverStyle"></div>
+
+      <div class="secret-help">
+        Mantén pulsado y desliza hacia arriba
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="next" (click)="nextPlayer()">
+        {{ isLastPlayer ? 'Empezar partida' : 'Siguiente jugador' }}
+      </button>
+    </div>
+  </div>
+</section>
+
+<ng-template #noPlayers>
+  <p>No hay jugadores cargados.</p>
+</ng-template>

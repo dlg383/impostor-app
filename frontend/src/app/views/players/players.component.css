@@ -1,40 +1,174 @@
-.modal-backdrop {
-  position: fixed;
-  inset: 0; /* top/right/bottom/left: 0 */
-  background: rgba(0, 0, 0, 0.5);
+:host {
+  display: block;
+  min-height: 100dvh;
+  padding: 16px;
+  background: #f3f4f6;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 10px 0 12px;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+/* Botones */
+button {
+  appearance: none;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Back */
+button[routerLink="/"] {
+  background: #f8fafc;
+}
+
+/* Botón "Añadir jugador" */
+button:not(.danger):not([routerLink="/"]) {
+  width: 100%;
+  margin-top: 12px;
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: #ffffff;
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.player-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  justify-content: space-between;
+  gap: 12px;
+
+  background: #ffffff;
+  border: 1px solid #e7e7ee;
+  border-radius: 16px;
+  padding: 12px 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+
+  span {
+    font-weight: 800;
+    color: #111827;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Borrar */
+.danger {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #9f1239;
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+
+/* MODAL */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.5);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  z-index: 999;
 }
 
 .modal {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  min-width: 300px;
-  max-width: 90vw;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1px solid #e7e7ee;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  display: grid;
+  gap: 12px;
 
-.modal h3 {
-  margin-top: 0;
-}
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+  }
 
-.modal label {
-  display: block;
-  margin-bottom: 0.75rem;
-}
+  label {
+    display: grid;
+    gap: 8px;
+    font-weight: 800;
+    color: #111827;
+  }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  input {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    font-weight: 700;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #93c5fd;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+    }
+  }
 }
 
 .modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  button {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  button:first-child {
+    background: #16a34a;
+    border-color: #15803d;
+    color: #ffffff;
+  }
+
+  button:last-child {
+    background: #f8fafc;
+    border-color: #e5e7eb;
+    color: #111827;
+  }
+}
+
+/* Tablet+ */
+@media (min-width: 720px) {
+  :host {
+    padding: 24px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
 }

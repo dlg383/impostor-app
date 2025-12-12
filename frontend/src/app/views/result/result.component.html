@@ -1,0 +1,34 @@
+<section class="card" *ngIf="!showResults">
+  <p class="lead">Empieza:</p>
+  <p class="big-name">{{ playerName }}</p>
+
+  <div class="divider"></div>
+
+  <button class="primary" (click)="showResults = true">
+    Ver resultados
+  </button>
+</section>
+
+<section class="card" *ngIf="showResults">
+  <h2>Resultados</h2>
+
+  <p class="section-title">Palabra</p>
+  <div class="pill word-pill">{{ word }}</div>
+
+  <div class="divider"></div>
+
+  <div class="impostors">
+    <p class="section-title">Impostores</p>
+
+    <ul>
+      <li *ngFor="let name of impostors">
+        <span>{{ name }}</span>
+        <span class="badge">Impostor</span>
+      </li>
+    </ul>
+  </div>
+
+  <button class="danger" routerLink="/">
+    Terminar
+  </button>
+</section>

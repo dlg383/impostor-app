@@ -29,9 +29,15 @@ function getAll() {
 
 function getTematicsSummary() {
   return Object.entries(dictionary).map(([id, value]) => ({
+    id: id,
     label: value.label,
-    activa: !!value.activa
+    activa: !!value.activa,
+    wordsCount: value.words.length
   }));
+}
+
+function getTematicWords(tematicId) {
+  return dictionary?.[tematicId]?.words ?? [];
 }
 
 function createTematic(label) {
@@ -62,12 +68,22 @@ function createTematic(label) {
   return { id, ...dictionary[id] };
 }
 
-function addWord(tematicId, wordText) {
-  if (!tematicId || !wordText) {
+function toggleActive(tematicKey) {
+  if (!tematicKey) return null;
+  if (!dictionary[tematicKey]) return null;
+
+  dictionary[tematicKey].activa = !dictionary[tematicKey].activa;
+
+  save();
+  return dictionary[tematicKey];
+}
+
+function addWord(tematicKey, wordText) {
+  if (!tematicKey || !wordText) {
     throw new Error('tematicId y wordText son obligatorios');
   }
 
-  const tematic = dictionary[tematicId];
+  const tematic = dictionary[tematicKey];
 
   if (!tematic) {
     // temática no encontrada
@@ -98,7 +114,7 @@ function addWord(tematicId, wordText) {
   save();
 
   // devuelvo info útil
-  return { tematic: tematicId, ...newWord };
+  return { tematic: tematicKey, ...newWord };
 }
 
 function getRandomWordFromActiveTematics() {
@@ -162,7 +178,9 @@ module.exports = {
   save,
   getAll,
   getTematicsSummary,
+  getTematicWords,
   createTematic,
+  toggleActive,
   addWord,
   getRandomWordFromActiveTematics
 };

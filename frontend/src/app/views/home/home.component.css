@@ -1,0 +1,154 @@
+.home {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+  align-content: start;
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  /* En pantallas más grandes damos más aire */
+  @media (min-width: 720px) {
+    padding: 24px;
+    gap: 16px;
+
+    h1 {
+      font-size: 28px;
+    }
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr; /* móvil: una columna */
+  gap: 12px;
+
+  @media (min-width: 720px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* tablet/desktop: dos columnas */
+  }
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e7e7ee;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: grid;
+  gap: 10px;
+
+  @media (min-width: 720px) {
+    padding: 16px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.35;
+
+    small {
+      color: #6b7280;
+      font-weight: 600;
+    }
+  }
+
+  .label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .value {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  button {
+    justify-self: start;
+  }
+}
+
+.impostors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  /* en móvil queda centrado y cómodo */
+  .big {
+    min-width: 56px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+  }
+
+  button {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0;
+  }
+}
+
+/* Botones generales */
+button {
+  appearance: none;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #111827;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.15s ease, border-color 0.15s ease;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+/* CTA principal */
+.start {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid #1d4ed8;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+
+  &:disabled {
+    background: #93c5fd;
+    border-color: #93c5fd;
+  }
+}
+
+.hint {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.35;
+}

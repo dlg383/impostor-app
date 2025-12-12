@@ -1,5 +1,5 @@
 export interface Word{
-  tematicLabel: String;
+  tematicLabel?: String;
   word: string;
   uses: Number;
 }

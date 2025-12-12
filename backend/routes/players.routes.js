@@ -17,6 +17,16 @@ router.post('/add', (req, res) => {
   return res.status(201).json(newPlayer);
 });
 
+router.delete('/delete/:name', (req, res) => {
+  const ok = playersStore.deletePlayer(req.params.name);
+
+  if (!ok) {
+    return res.status(404).json({ message: 'No se encontró ningún jugador con ese nombre' });
+  }
+
+  return res.json({ message: 'Jugador(es) borrado(s)' });
+});
+
 router.post('/select-impostors', (req, res) => {
   const { impostorCount } = req.body;
 

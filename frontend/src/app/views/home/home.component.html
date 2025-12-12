@@ -1,4 +1,45 @@
-<p>home works!</p>
-<button routerLink="/players">Jugadores</button>
-<button routerLink="/categories">Categorías</button>
-<button (click)="initGame()">Iniciar Juego</button>
+<section class="home">
+  <h1>Inicio</h1>
+
+  <div class="stats">
+    <div class="card">
+      <div class="label">Jugadores</div>
+      <div class="value">{{ playersCount }}</div>
+      <button routerLink="/players">Gestionar jugadores</button>
+    </div>
+
+    <div class="card">
+      <div class="label">Categorías Activas</div>
+      <div class="value">{{ categoriesCount }}</div>
+      <button routerLink="/categories">Gestionar categorías</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Impostores</h2>
+
+    <p>
+      Selecciona cuántos impostores habrá en la partida.
+      <br />
+      <small>
+        Máximo recomendado: {{ maxImpostors }} (según {{ playersCount }} jugadores)
+      </small>
+    </p>
+
+    <div class="impostors">
+      <button (click)="decreaseImpostors()" [disabled]="numImpostor <= minImpostors">-</button>
+
+      <span class="big">{{ numImpostor }}</span>
+
+      <button (click)="increaseImpostors()" [disabled]="numImpostor >= maxImpostors">+</button>
+    </div>
+  </div>
+
+  <button class="start" (click)="initGame()" [disabled]="!canStart">
+    Iniciar Juego
+  </button>
+
+  <p *ngIf="!canStart" class="hint">
+    Necesitas al menos 3 jugadores y 1 categoría activa para iniciar.
+  </p>
+</section>

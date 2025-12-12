@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Evita “saltos” con barras del navegador en móvil y asegura alto completo */
+body {
+  min-height: 100dvh;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+/* Importante: app-root también debe poder crecer a toda la pantalla */
+app-root {
+  display: block;
+  width: 100%;
+  min-height: 100dvh;
+}

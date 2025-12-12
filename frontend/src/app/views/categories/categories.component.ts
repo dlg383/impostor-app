@@ -34,6 +34,16 @@ export class CategoriesComponent implements OnInit{
     });
   }
 
+  toggleTematic(tematic: Tematic): void {
+    const id = tematic.id.toString()
+    this.dictionaryService.toggleTematic(id).subscribe({
+      next: (updated: Tematic) => {
+        tematic.activa = updated.activa;
+      },
+      error: (err) => console.error(err)
+    });
+  }
+
   openModal(): void {
     this.showAddCategoryModal = true;
   }

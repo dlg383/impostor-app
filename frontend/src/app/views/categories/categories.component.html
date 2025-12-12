@@ -1,29 +1,56 @@
 <button routerLink="/">Back</button>
 
-<ul>
-  <li *ngFor="let tematic of tematics">
-    <button routerLink="/category">
-      {{ tematic.label }} - {{ tematic.activa ? 'activa' : 'no activa' }}
+<h2>Categorías</h2>
+
+<ul class="list">
+  <li *ngFor="let tematic of tematics" class="row">
+    <!-- Zona clickable que navega a palabras -->
+    <button
+      class="go"
+      [routerLink]="['/category']"
+      [state]="{ id: tematic.id }"
+      type="button"
+    >
+      <div class="title">
+        <span class="name">{{ tematic.label }}</span>
+        <span class="badge" [class.on]="tematic.activa">
+          {{ tematic.activa ? 'Activa' : 'Inactiva' }}
+        </span>
+      </div>
+
+      <div class="meta">
+        <span class="words"> {{ tematic.wordsCount ?? 0 }} palabras</span>
+      </div>
     </button>
+
+    <!-- Toggle activa/inactiva (evita navegar) -->
+    <label class="switch" (click)="$event.stopPropagation()">
+      <input
+        type="checkbox"
+        [checked]="tematic.activa"
+        (click)="$event.stopPropagation()"
+        (change)="toggleTematic(tematic)"
+      />
+      <span class="slider"></span>
+    </label>
   </li>
 </ul>
 
-<!-- Botón que abre el modal -->
-<button (click)="openModal()">
-  Añadir Tema
+<button class="add" (click)="openModal()">
+  Añadir Categoría
 </button>
 
 <!-- MODAL -->
-<div *ngIf="showAddCategoryModal" class="modal-backdrop">
-  <div class="modal">
-    <h3>Añadir jugador</h3>
+<div *ngIf="showAddCategoryModal" class="modal-backdrop" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <h3>Añadir Categoría</h3>
 
     <label>
       Nombre:
       <input
         type="text"
         [(ngModel)]="newTematic"
-        placeholder="Nombre del jugador"
+        placeholder="Nombre de la categoría"
       />
     </label>
 

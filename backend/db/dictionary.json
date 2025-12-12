@@ -10,20 +10,28 @@
       {
         "word": "perro",
         "uses": 0
+      },
+      {
+        "word": "tigre",
+        "uses": 0
+      },
+      {
+        "word": "cerdo",
+        "uses": 0
       }
     ]
   },
   "lugares": {
-    "activa": true,
+    "activa": false,
     "label": "Lugares",
     "words": [
       {
         "word": "playa",
-        "uses": 0
+        "uses": 3
       },
       {
         "word": "montaña",
-        "uses": 0
+        "uses": 2
       }
     ]
   },
@@ -33,23 +41,23 @@
     "words": [
       {
         "word": "Colt",
-        "uses": 0
+        "uses": 2
       },
       {
         "word": "Mandy",
-        "uses": 0
+        "uses": 4
       },
       {
         "word": "MZ",
-        "uses": 0
+        "uses": 3
       },
       {
         "word": "Leon",
-        "uses": 0
+        "uses": 2
       },
       {
         "word": "Señor P",
-        "uses": 0
+        "uses": 3
       }
     ]
   },
