@@ -54,7 +54,7 @@ function selectImpostor(impostorCount) {
   }
 
   chosenIndices.forEach(idx => {
-    setImpostorTrue(idx);
+    players[idx].impostor = true;
   });
   save();
   return true;
