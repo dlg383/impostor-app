@@ -3,72 +3,262 @@
     "activa": true,
     "label": "Animales",
     "words": [
-      {
-        "word": "gato",
-        "uses": 0
-      },
-      {
-        "word": "perro",
-        "uses": 0
-      },
-      {
-        "word": "tigre",
-        "uses": 0
-      },
-      {
-        "word": "cerdo",
-        "uses": 0
-      }
+      { "word": "gato", "uses": 0 },
+      { "word": "perro", "uses": 0 },
+      { "word": "tigre", "uses": 0 },
+      { "word": "cerdo", "uses": 0 },
+      { "word": "elefante", "uses": 0 },
+      { "word": "jirafa", "uses": 0 },
+      { "word": "león", "uses": 0 },
+      { "word": "cebra", "uses": 0 },
+      { "word": "pingüino", "uses": 0 },
+      { "word": "delfín", "uses": 0 },
+      { "word": "tortuga", "uses": 0 },
+      { "word": "cocodrilo", "uses": 0 },
+      { "word": "águila", "uses": 0 },
+      { "word": "búho", "uses": 0 },
+      { "word": "serpiente", "uses": 0 },
+      { "word": "rana", "uses": 0 },
+      { "word": "mariposa", "uses": 0 },
+      { "word": "tiburón", "uses": 0 },
+      { "word": "ballena", "uses": 0 },
+      { "word": "camello", "uses": 0 },
+      { "word": "oso", "uses": 0 },
+      { "word": "lobo", "uses": 0 },
+      { "word": "zorro", "uses": 0 },
+      { "word": "mono", "uses": 0 }
     ]
   },
   "lugares": {
-    "activa": false,
+    "activa": true,
     "label": "Lugares",
     "words": [
-      {
-        "word": "playa",
-        "uses": 3
-      },
-      {
-        "word": "montaña",
-        "uses": 2
-      }
+      { "word": "playa", "uses": 0 },
+      { "word": "montaña", "uses": 0 },
+      { "word": "bosque", "uses": 0 },
+      { "word": "desierto", "uses": 0 },
+      { "word": "isla", "uses": 0 },
+      { "word": "cascada", "uses": 0 },
+      { "word": "ciudad", "uses": 0 },
+      { "word": "pueblo", "uses": 0 },
+      { "word": "castillo", "uses": 0 },
+      { "word": "museo", "uses": 0 },
+      { "word": "aeropuerto", "uses": 0 },
+      { "word": "estación", "uses": 0 },
+      { "word": "parque", "uses": 0 },
+      { "word": "zoo", "uses": 0 },
+      { "word": "biblioteca", "uses": 0 },
+      { "word": "hospital", "uses": 0 },
+      { "word": "colegio", "uses": 0 },
+      { "word": "cine", "uses": 0 },
+      { "word": "restaurante", "uses": 0 },
+      { "word": "estadio", "uses": 0 },
+      { "word": "puerto", "uses": 0 },
+      { "word": "mercado", "uses": 0 },
+      { "word": "catedral", "uses": 0 },
+      { "word": "puente", "uses": 0 }
     ]
   },
   "brawlstars": {
     "activa": true,
-    "label": "Brawl Starts",
+    "label": "Brawl Stars",
     "words": [
-      {
-        "word": "Colt",
-        "uses": 2
-      },
-      {
-        "word": "Mandy",
-        "uses": 4
-      },
-      {
-        "word": "MZ",
-        "uses": 3
-      },
-      {
-        "word": "Leon",
-        "uses": 2
-      },
-      {
-        "word": "Señor P",
-        "uses": 3
-      }
+      { "word": "Shelly", "uses": 0 },
+      { "word": "Colt", "uses": 0 },
+      { "word": "Bull", "uses": 0 },
+      { "word": "Brock", "uses": 0 },
+      { "word": "Dynamike", "uses": 0 },
+      { "word": "Bo", "uses": 0 },
+      { "word": "Poco", "uses": 0 },
+      { "word": "El Primo", "uses": 0 },
+      { "word": "Barley", "uses": 0 },
+      { "word": "Rosa", "uses": 0 },
+      { "word": "Jessie", "uses": 0 },
+      { "word": "Nita", "uses": 0 },
+      { "word": "Penny", "uses": 0 },
+      { "word": "Carl", "uses": 0 },
+      { "word": "Jacky", "uses": 0 },
+      { "word": "Piper", "uses": 0 },
+      { "word": "Pam", "uses": 0 },
+      { "word": "Frank", "uses": 0 },
+      { "word": "Bibi", "uses": 0 },
+      { "word": "Leon", "uses": 0 },
+      { "word": "Spike", "uses": 0 },
+      { "word": "Crow", "uses": 0 },
+      { "word": "Señor P", "uses": 0 },
+      { "word": "Mandy", "uses": 0 }
     ]
   },
   "pelis": {
     "activa": true,
     "label": "Pelis",
-    "words": []
+    "words": [
+      { "word": "Titanic", "uses": 0 },
+      { "word": "Avatar", "uses": 0 },
+      { "word": "Matrix", "uses": 0 },
+      { "word": "Gladiator", "uses": 0 },
+      { "word": "Toy Story", "uses": 0 },
+      { "word": "Shrek", "uses": 0 },
+      { "word": "Coco", "uses": 0 },
+      { "word": "Up", "uses": 0 },
+      { "word": "El Rey León", "uses": 0 },
+      { "word": "Frozen", "uses": 0 },
+      { "word": "Los Vengadores", "uses": 0 },
+      { "word": "Spider-Man", "uses": 0 },
+      { "word": "Harry Potter", "uses": 0 },
+      { "word": "Star Wars", "uses": 0 },
+      { "word": "Jurassic Park", "uses": 0 },
+      { "word": "Joker", "uses": 0 },
+      { "word": "Interstellar", "uses": 0 },
+      { "word": "Inception", "uses": 0 },
+      { "word": "El Padrino", "uses": 0 },
+      { "word": "Rocky", "uses": 0 },
+      { "word": "Terminator", "uses": 0 },
+      { "word": "Regreso al Futuro", "uses": 0 },
+      { "word": "Piratas del Caribe", "uses": 0 },
+      { "word": "E.T.", "uses": 0 }
+    ]
   },
   "series": {
     "activa": true,
     "label": "Series",
-    "words": []
+    "words": [
+      { "word": "Breaking Bad", "uses": 0 },
+      { "word": "La Casa de Papel", "uses": 0 },
+      { "word": "Stranger Things", "uses": 0 },
+      { "word": "Juego de Tronos", "uses": 0 },
+      { "word": "The Walking Dead", "uses": 0 },
+      { "word": "Los Simpson", "uses": 0 },
+      { "word": "Friends", "uses": 0 },
+      { "word": "The Office", "uses": 0 },
+      { "word": "Dark", "uses": 0 },
+      { "word": "Narcos", "uses": 0 },
+      { "word": "Black Mirror", "uses": 0 },
+      { "word": "Vikingos", "uses": 0 },
+      { "word": "The Boys", "uses": 0 },
+      { "word": "Wednesday", "uses": 0 },
+      { "word": "Peaky Blinders", "uses": 0 },
+      { "word": "Sherlock", "uses": 0 },
+      { "word": "The Mandalorian", "uses": 0 },
+      { "word": "Dragon Ball", "uses": 0 },
+      { "word": "One Piece", "uses": 0 },
+      { "word": "Attack on Titan", "uses": 0 },
+      { "word": "Rick y Morty", "uses": 0 },
+      { "word": "South Park", "uses": 0 },
+      { "word": "The Witcher", "uses": 0 },
+      { "word": "Cómo conocí a vuestra madre", "uses": 0 }
+    ]
+  },
+  "comida": {
+    "activa": true,
+    "label": "Comida",
+    "words": [
+      { "word": "pizza", "uses": 0 },
+      { "word": "hamburguesa", "uses": 0 },
+      { "word": "tacos", "uses": 0 },
+      { "word": "paella", "uses": 0 },
+      { "word": "sushi", "uses": 0 },
+      { "word": "lasagna", "uses": 0 },
+      { "word": "croquetas", "uses": 0 },
+      { "word": "ensalada", "uses": 0 }
+    ]
+  },
+  "bebidas": {
+    "activa": true,
+    "label": "Bebidas",
+    "words": [
+      { "word": "agua", "uses": 0 },
+      { "word": "café", "uses": 0 },
+      { "word": "té", "uses": 0 },
+      { "word": "zumo", "uses": 0 },
+      { "word": "cola", "uses": 0 },
+      { "word": "batido", "uses": 0 },
+      { "word": "limonada", "uses": 0 },
+      { "word": "chocolate caliente", "uses": 0 }
+    ]
+  },
+  "deportes": {
+    "activa": true,
+    "label": "Deportes",
+    "words": [
+      { "word": "fútbol", "uses": 0 },
+      { "word": "baloncesto", "uses": 0 },
+      { "word": "tenis", "uses": 0 },
+      { "word": "natación", "uses": 0 },
+      { "word": "ciclismo", "uses": 0 },
+      { "word": "boxeo", "uses": 0 },
+      { "word": "esquí", "uses": 0 },
+      { "word": "voleibol", "uses": 0 }
+    ]
+  },
+  "objetos": {
+    "activa": true,
+    "label": "Objetos",
+    "words": [
+      { "word": "silla", "uses": 0 },
+      { "word": "mesa", "uses": 0 },
+      { "word": "móvil", "uses": 0 },
+      { "word": "llaves", "uses": 0 },
+      { "word": "reloj", "uses": 0 },
+      { "word": "mochila", "uses": 0 },
+      { "word": "gafas", "uses": 0 },
+      { "word": "linterna", "uses": 0 }
+    ]
+  },
+  "ropa": {
+    "activa": true,
+    "label": "Ropa",
+    "words": [
+      { "word": "camiseta", "uses": 0 },
+      { "word": "pantalón", "uses": 0 },
+      { "word": "chaqueta", "uses": 0 },
+      { "word": "vestido", "uses": 0 },
+      { "word": "sudadera", "uses": 0 },
+      { "word": "zapatillas", "uses": 0 },
+      { "word": "gorra", "uses": 0 },
+      { "word": "bufanda", "uses": 0 }
+    ]
+  },
+  "videojuegos": {
+    "activa": true,
+    "label": "Videojuegos",
+    "words": [
+      { "word": "Minecraft", "uses": 0 },
+      { "word": "Fortnite", "uses": 0 },
+      { "word": "Roblox", "uses": 0 },
+      { "word": "Among Us", "uses": 0 },
+      { "word": "GTA", "uses": 0 },
+      { "word": "FIFA", "uses": 0 },
+      { "word": "Clash Royale", "uses": 0 },
+      { "word": "Pokémon", "uses": 0 }
+    ]
+  },
+  "marcas": {
+    "activa": true,
+    "label": "Marcas",
+    "words": [
+      { "word": "Nike", "uses": 0 },
+      { "word": "Adidas", "uses": 0 },
+      { "word": "Apple", "uses": 0 },
+      { "word": "Samsung", "uses": 0 },
+      { "word": "Coca-Cola", "uses": 0 },
+      { "word": "Google", "uses": 0 },
+      { "word": "PlayStation", "uses": 0 },
+      { "word": "LEGO", "uses": 0 }
+    ]
+  },
+  "musica": {
+    "activa": true,
+    "label": "Música",
+    "words": [
+      { "word": "guitarra", "uses": 0 },
+      { "word": "piano", "uses": 0 },
+      { "word": "batería", "uses": 0 },
+      { "word": "violín", "uses": 0 },
+      { "word": "rap", "uses": 0 },
+      { "word": "rock", "uses": 0 },
+      { "word": "reggaetón", "uses": 0 },
+      { "word": "pop", "uses": 0 }
+    ]
   }
 }
