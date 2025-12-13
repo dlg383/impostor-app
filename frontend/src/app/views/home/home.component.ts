@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit{
       switchMap(() => this.dictionaryService.getRandomWord())
     ).subscribe({
       next: (response) => {
-        const word = response.word;
+        const word = response;
 
         // Navegamos al componente /game pasando la palabra en el state
         this.router.navigate(['/game'], {

@@ -12,7 +12,7 @@ import { NgFor, NgIf, NgStyle } from '@angular/common';
   styleUrl: './game.component.css'
 })
 export class GameComponent implements OnInit{
-  word!: string;
+  word!: any;
   players: Player[] = [];
 
   currentIndex = 0;
@@ -62,7 +62,12 @@ export class GameComponent implements OnInit{
 
   get secretText(): string {
     if (!this.currentPlayer) return '';
-    return this.currentPlayer.impostor ? 'Eres impostor' : 'La palabra es: ' +  this.word;
+
+    if (this.currentPlayer.impostor) {
+      return `Eres impostor\nLa temática es: ${this.word.tematicLabel}`;
+    }
+
+    return `La palabra es: ${this.word.word}`;
   }
 
   get coverStyle(): Record<string, string> {
@@ -109,7 +114,7 @@ export class GameComponent implements OnInit{
       if (randomPlayer) {
         this.router.navigate(['/result'], {
           state: {
-            word: this.word,
+            word: this.word.word,
             randomPlayerName: randomPlayer.name
           }
         });

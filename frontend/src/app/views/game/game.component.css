@@ -169,5 +169,6 @@ button:disabled {
 
   .secret-text {
     font-size: 24px;
+    white-space: pre-line;
   }
 }
